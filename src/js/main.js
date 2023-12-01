@@ -1,4 +1,2 @@
-import './components/modal'
-import './components/components'
-
-
+import "./functions";
+import "./components/components";
