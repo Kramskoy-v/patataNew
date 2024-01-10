@@ -10,6 +10,7 @@ import {
   curYear,
   engineSelects,
   headerContainer,
+  forms,
   modal,
   modalOk,
   modelSelects,
@@ -65,7 +66,7 @@ categoryBtn.addEventListener("click", () => {
 
 // рендер списка категорий
 
-servicesCategory.map((item) => {
+servicesCategory.forEach((item) => {
   new Lists(
     item.title,
     "li",
@@ -75,7 +76,7 @@ servicesCategory.map((item) => {
 });
 
 const renderList = (index) => {
-  servicesCategory[index].service.map((item) => {
+  servicesCategory[index].service.forEach((item) => {
     new Lists(
       item.description,
       "li",
@@ -111,7 +112,7 @@ servicesItems.forEach((curElement, index) => {
 //рендер селектов
 
 otherBrands.forEach((otherBrand) => {
-  motorcycles.map((element, i) => {
+  motorcycles.forEach((element, i) => {
     new Lists(element.brand, "option", otherBrand, i).renderBrands();
   });
 });
@@ -161,7 +162,7 @@ modelSelects.forEach((modelSelect) => {
 const years = Array.from({ length: 20 }, (_, i = 1) => curYear - i);
 
 yearsSelector.forEach((selector) => {
-  years.map((year) => new Lists(year, "option", selector).renderYears());
+  years.forEach((year) => new Lists(year, "option", selector).renderYears());
 });
 
 // модалки
@@ -202,6 +203,24 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-/*В случае успешной отправки формы нужно запустить эту функцию:
-showModal(modalOk)
-Откроется модалка с уведомлением что всё Ок*/
+forms.forEach((form) =>
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const req = new XMLHttpRequest();
+    req.open("POST", "../send.php", true);
+    req.onload = function () {
+      if (req.status >= 200 && req.status < 400) {
+        showModal(modalOk);
+        form.reset();
+      } else {
+        alert("Ошибка сервера. Номер: " + req.status);
+      }
+    };
+
+    // Если не удалось отправить запрос. Стоит блок на хостинге
+    req.onerror = function () {
+      alert("Ошибка отправки запроса");
+    };
+    req.send(new FormData(e.target));
+  })
+);

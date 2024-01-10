@@ -285,21 +285,21 @@
       <section class="feedback">
         <div class="container">
           <h2 class="section-title">Подберем запчасти для вашего мотоцикла</h2>
-          <form class="main-form">
+          <form class="main-form" action="#" method="post">
             <div class="flex-wrapper">
               <div class="main-form__selects">
-                <select name="brand" aria-label="choice brand">
+                <select name="brand" aria-label="brand">
                   <option hidden selected disabled value="">Марка</option>
                   <option class="other-brand" value="Другая марка">
                     Другая марка
                   </option>
                 </select>
 
-                <select name="model" aria-label="choice model">
+                <select name="model" aria-label="model">
                   <option hidden selected disabled>Модель</option>
                 </select>
 
-                <select name="engine" aria-label="choice engine">
+                <select name="engine" aria-label="engine">
                   <option hidden selected disabled>Тип двигателя</option>
                 </select>
 
@@ -919,10 +919,10 @@
           <p class="vacancy__subtitle">
             Оставляй заявку и мы свяжемся с тобой в ближайшее время!
           </p>
-          <form class="form-vacancy">
+          <form class="form-vacancy" action="#" method="post">
             <div class="flex-wrapper">
               <div class="form-vacancy__inputs">
-                <input type="text" name="vName" placeholder="Имя" />
+                <input type="text" name="vName" placeholder="Имя" required />
                 <input
                   required
                   type="text"
@@ -930,7 +930,7 @@
                   placeholder="Телефон"
                   data-phone
                 />
-                <input type="email" name="vMail" placeholder="Эл. почта" />
+                <input type="email" name="vEmail" placeholder="Эл. почта" />
               </div>
               <div class="form-vacancy__info">
                 <p class="vacancy__subtitle">
@@ -1137,25 +1137,25 @@
           <h2>Оставьте заявку на ремонт вашей техники</h2>
         </div>
         <div class="modal__form">
-          <form class="main-form">
+          <form class="main-form" action="#" method="post">
             <div class="flex-wrapper">
               <div class="main-form__selects">
-                <select name="brand" aria-label="brand">
+                <select name="mBrand" aria-label="brand">
                   <option hidden selected disabled value="">Марка</option>
                   <option class="other-brand" value="Другая марка">
                     Другая марка
                   </option>
                 </select>
 
-                <select name="model" aria-label="model">
+                <select name="mModel" aria-label="model">
                   <option hidden selected disabled>Модель</option>
                 </select>
 
-                <select name="engine" aria-label="engine">
+                <select name="mEngine" aria-label="engine">
                   <option hidden selected disabled>Тип двигателя</option>
                 </select>
 
-                <select name="years" aria-label="years">
+                <select name="mYears" aria-label="years">
                   <option hidden selected disabled value="0">
                     Год выпуска
                   </option>
@@ -1167,28 +1167,28 @@
               <textarea
                 class="main-form__textarea"
                 placeholder="Дополнительная информация"
-                name="add-information"
+                name="mAdd-information"
               ></textarea>
             </div>
             <div class="main-form__inputs">
               <input
                 placeholder="Имя"
                 type="text"
-                name="user-name"
+                name="mUsername"
                 autocomplete="off"
               />
               <input
                 required
                 placeholder="Телефон"
                 type="tel"
-                name="user-phone"
+                name="mUserphone"
                 autocomplete="off"
                 data-phone
               />
               <input
                 placeholder="Эл. почта"
                 type="email"
-                name="user-mail"
+                name="mUsermail"
                 autocomplete="off"
               />
             </div>

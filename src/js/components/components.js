@@ -1,13 +1,11 @@
-import Swiper from 'swiper/bundle';
-import {screenWidth} from '../_vars';
+import Swiper from "swiper/bundle";
+import { screenWidth } from "../_vars.js";
 import Inputmask from "inputmask";
-import SmoothScroll from '../../../node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js'
-
+import SmoothScroll from "smooth-scroll/dist/smooth-scroll.polyfills.js";
 
 // плавная прокрутка по якорям
 
 const scroll = new SmoothScroll('a[href*="#"]');
-
 
 // слайдеры
 
@@ -16,7 +14,6 @@ const gallerySwiper = new Swiper(".gallery__swiper", {
   spaceBetween: 30,
   loop: true,
   breakpoints: {
-
     992: {
       slidesPerView: 1.1,
     },
@@ -25,14 +22,13 @@ const gallerySwiper = new Swiper(".gallery__swiper", {
     },
     1440: {
       slidesPerView: 2.2,
-    }
+    },
   },
   navigation: {
     nextEl: ".gallery__btn-next",
     prevEl: ".gallery__btn-prev",
   },
 });
-
 
 if (screenWidth <= 1024.5) {
   const reviewsSwiper = new Swiper(".reviews__swiper", {
@@ -60,14 +56,13 @@ if (screenWidth <= 1024.5) {
 
 // маска телефона
 
-const phoneInputs = document.querySelectorAll('input[data-phone]');
+const phoneInputs = document.querySelectorAll("input[data-phone]");
 
 if (phoneInputs) {
-  phoneInputs.forEach(phone => {
+  phoneInputs.forEach((phone) => {
     Inputmask({
-      "mask": "+7 999 999-99-99",
-      showMaskOnHover: false
+      mask: "+7 999 999-99-99",
+      showMaskOnHover: false,
     }).mask(phone);
   });
 }
-
