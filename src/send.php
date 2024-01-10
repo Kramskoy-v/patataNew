@@ -17,6 +17,8 @@ $name = $_POST['user-name'];
 $phone = $_POST['user-phone'];
 $email = $_POST['user-mail'];
 
+$cutBrand = preg_replace("/\d+\S/", "", $brand);
+
 if ($name && $phone) {
     $title = "Заявка на ремонт с сайта PaTaTa Club";
     $body = "
@@ -24,7 +26,7 @@ if ($name && $phone) {
     <p><b>Имя:</b> $name</p>
     <p><b>Номер телефона:</b> $phone</p>
     <p><b>Электронная почта:</b> $email</p>
-    <p><b>Марка мотоцикла:</b> $brand</p>
+    <p><b>Марка мотоцикла:</b> $cutBrand</p>
     <p><b>Модель:</b> $model</p>
     <p><b>Тип двигателя:</b> $engine</p>
     <p><b>Год выпуска:</b> $years</p>
@@ -44,6 +46,8 @@ $mName = $_POST['mUsername'];
 $mPhone = $_POST['mUserphone'];
 $mEmail = $_POST['mUsermail'];
 
+$cutMBrand = preg_replace("/\d+\S/", "", $mBrand);
+
 if ($mName && $mPhone) {
     $title = "Заявка на ремонт с сайта PaTaTa Club";
     $body = "
@@ -51,7 +55,7 @@ if ($mName && $mPhone) {
     <p><b>Имя:</b> $mName</p>
     <p><b>Номер телефона:</b> $mPhone</p>
     <p><b>Электронная почта:</b> $mEmail</p>
-    <p><b>Марка мотоцикла:</b> $mBrand</p>
+    <p><b>Марка мотоцикла:</b> $cutMBrand</p>
     <p><b>Модель:</b> $mModel</p>
     <p><b>Тип двигателя:</b> $mEngine</p>
     <p><b>Год выпуска:</b> $mYears</p>
