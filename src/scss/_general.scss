@@ -93,10 +93,10 @@
       display: block;
       padding-top: 20px;
       color: $orange;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 300;
       font-size: 20px;
-      line-height: 1.20;
+      line-height: 1.2;
     }
   }
 }
@@ -113,15 +113,15 @@
 
   &__list {
     width: 100%;
+    column-gap: 20px;
   }
 
   &__item {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0 30px 315px;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid #ebebeb;
 
     &:not(:first-child) {
       padding-top: 50px;
@@ -129,18 +129,17 @@
   }
 
   &__description {
-    width: 520px;
+    width: 48%;
     flex-shrink: 0;
-    margin-right: 20px;
   }
 
   &__info {
-    width: 570px;
+    width: 50%;
     flex-shrink: 0;
     color: #000;
     font-size: 80px;
     font-weight: 400;
-    line-height: 1.20;
+    line-height: 1.2;
     letter-spacing: 3.2px;
   }
 }
@@ -154,7 +153,6 @@
   .section-title {
     margin-top: 5px;
     margin-bottom: 40px;
-
   }
 
   &__info {
@@ -214,7 +212,7 @@
     background-color: $orange;
 
     &::after {
-      content: '';
+      content: "";
       width: 1390px;
       height: 210px;
       position: absolute;
@@ -270,12 +268,12 @@
 
   &__item-title {
     padding: 30px 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: 300;
     color: $black;
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:hover {
       background-color: $orange;
@@ -304,7 +302,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid #ebebeb;
 
     p {
       margin-right: 20px;
@@ -399,7 +397,7 @@
     line-height: 1.2;
 
     &::placeholder {
-      color: #5B605E;
+      color: #5b605e;
     }
 
     &:focus-visible {
@@ -434,13 +432,11 @@
       }
 
       &::placeholder {
-        color: #5B605E;
+        color: #5b605e;
       }
     }
   }
-
 }
-
 
 .reviews {
   .container {
@@ -460,8 +456,8 @@
     height: auto;
     padding: 27px 24px 35px;
     border-radius: 10px;
-    border: 1px solid #EBEBEB;
-    background: #FFF;
+    border: 1px solid #ebebeb;
+    background: #fff;
     color: $black;
     box-sizing: border-box;
   }
@@ -509,7 +505,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
-    transition: all .3s;
+    transition: all 0.3s;
     text-align: right;
 
     &:hover {
@@ -551,7 +547,7 @@
 
   .container {
     padding: 110px 315px 15px 865px;
-    background-image: url('../img/vacancy_bg.png');
+    background-image: url("../img/vacancy_bg.png");
     background-repeat: no-repeat;
     background-position: 315px bottom;
     color: $black;
@@ -605,7 +601,7 @@
       }
 
       &::placeholder {
-        color: #5B605E;
+        color: #5b605e;
       }
     }
   }
@@ -643,14 +639,14 @@
       }
 
       input + label:before {
-        content: '';
+        content: "";
         position: absolute;
         width: 16px;
         height: 16px;
         left: 0;
         top: 0;
         border: 1px solid #000;
-        background: #FFF;
+        background: #fff;
       }
 
       input:checked + label:after {
@@ -716,7 +712,6 @@
       font-style: normal;
       font-weight: 700;
     }
-
   }
 
   &__times {
@@ -748,7 +743,6 @@
   }
 }
 
-
 .footer {
   .container {
     padding: 54px 315px 32px;
@@ -769,12 +763,12 @@
 
     > a {
       display: inline-block;
-      color: #5B605E;
+      color: #5b605e;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
-      line-height: 1.20;
-      transition: all .3s;
+      line-height: 1.2;
+      transition: all 0.3s;
 
       &:hover {
         color: $orange;
@@ -798,12 +792,11 @@
   &__socials {
     a {
       display: inline-block;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:hover {
         transform: scale(1.05);
       }
-
 
       &:not(:last-child) {
         margin-right: 12px;
@@ -882,7 +875,7 @@
 
   p {
     margin-bottom: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -901,12 +894,3 @@
     padding: 50px 20px;
   }
 }
-
-
-
-
-
-
-
-
-
