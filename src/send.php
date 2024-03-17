@@ -51,7 +51,7 @@ $cutMBrand = preg_replace("/\d+\S/", "", $mBrand);
 if ($mName && $mPhone) {
     $title = "Заявка на ремонт с сайта PaTaTa Club";
     $body = "
-    <h2>Новая заявка на ремонт. Форма модального окна</h2>
+    <h2>Новая заявка на ремонт.</h2>
     <p><b>Имя:</b> $mName</p>
     <p><b>Номер телефона:</b> $mPhone</p>
     <p><b>Электронная почта:</b> $mEmail</p>
@@ -101,14 +101,14 @@ try {
 
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'kramskoy.va@yandex.ru'; // Логин на почте
-    $mail->Password   = '***'; // Пароль на почте
+    $mail->Password   = '**'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('kramskoy.va@yandex.ru', 'PaTaTa Club'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    //$mail->addAddress('leha-biker@mail.ru');
-    $mail->addAddress('vencework42@gmail.com');
+    $mail->addAddress(' patataclub@yandex.ru');
+    //$mail->addAddress('vencework42@gmail.com');
 
     // Отправка сообщения
     $mail->isHTML(true);
